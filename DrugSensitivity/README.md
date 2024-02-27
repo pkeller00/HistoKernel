@@ -1,12 +1,9 @@
-# WSI Retrieval
+# Dug Sensitivity
 
 ## Introduction
-For this task, we are interested in returning the top $k$ most similar WSIs for a given query image, $X_q$. Here for a query WSI, $X_q$, given that we know the site of origin of $X_q$ we aim to retrieve the top $k$ most 'similar' WSIs. In this paper, similarity is defined as images from the same cancer sub-type. For example, if $X_q$ originates from the brain and is of sub-type brain lower grade glioma (LGG) a database of WSIs originating from the brain is searched and the algorithm is considered successful if it returns images of the same sub-type (in this case LGG).
+For this task, we are interested in the prediction of patients’ sensitivity to multiple drugs from routine H\&E images.
 
 ## Usage
-To perform this the distance matrix and its corresponding slide IDs located at `data/MMD_matrix/D_1052_blur_10.npy` and `data/MMD_matrix/slide_IDs_1052.npy` respectively are used. You can also use your distance matrix by using `MMD_distance_matrix_generator`.
+To perform this the distance matrix of the entire TCGA and its corresponding slide IDs located at `data/MMD_matrix/D_1052_blur_10.npy` and `data/MMD_matrix/slide_IDs_1052.npy` respectively are used.In the code we then filter this matrix to only contain relavant BRCA samples inline with the baseline study. You can also use your distance matrix by using `MMD_distance_matrix_generator`.
 
-To perform WSI Retrieval for the RetCCL comparison paper and our MMD-based approach:
-1) Run `WSIRetrival/generate_mosaic.py` to generate the mosaics used by the comparison paper.
-2) Run `WSIRetrival/parallel_search.py` to retrieve the top $k=5$ most similar slides using the comparison search method.
-3) Run `WSIRetrival/macro_average.py` to calculate the majority vote at the top k search results ($mMv@k$) for each site by each method as well as the total macro average across all sites.
+To perform Dug Sensitivity prediction for our MMD-based approach Run `DrugSensitivity/predict_sensitivity.py` to first filter the relvant samples from BRCA and then train a Support Vector Regressor for each compound separately. The results of 5-fold cross validation are stored as a list in `DrugSensitivity/results.pickle`. Each entry of results corresponds to one of the folds such that a given entry is a $D\times 2$ matrix $R^j$ where D is the number of drugs used in the study ($D=427$) and $j$ is the fold $j \in 1..5$. THe two columns of the matrix, for a given drug at row $i$, correspond to the spearman rank coeffeicent ($R_{i,0}$) and its associated p-value ($R_{i,1}$) .
