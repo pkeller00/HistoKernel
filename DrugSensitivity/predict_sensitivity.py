@@ -14,7 +14,7 @@ SLIDE_IDS_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/MMDMatrix/I
 D_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/MMDMatrix/D_full.npy'
 DRUG_SENSITIVITY_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/DrugSensitivity/BRCA_Drug_sensitivity.csv'
 GOOD_SLIDES_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/DrugSensitivity/slide_selection_final.txt'
-OUTPUT_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/DrugSensitivity/results.pickle'
+OUTPUT_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/DrugSensitivity/results/results.pickle'
 
 slides_mmd = np.load(SLIDE_IDS_PATH)
 slides_mmd = [os.path.basename(i).split('.')[0] for i in slides_mmd]
@@ -118,4 +118,3 @@ with open(OUTPUT_PATH, "wb") as fp:   #Pickling
 with open(OUTPUT_PATH, "rb") as fp:   # Unpickling
     b = pickle.load(fp)
     print(b)
-
