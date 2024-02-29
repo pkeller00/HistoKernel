@@ -1,4 +1,4 @@
-# Dug Sensitivity
+# Drug Sensitivity
 
 ## Introduction
 For this task, we are interested in the prediction of patients’ sensitivity to multiple drugs from routine H\&E images.
