@@ -1,4 +1,4 @@
-# Anubis: Slide-Level Maximum Mean Discrepancy  Kernels in Computational Pathology
+# Anubis: Maximum Mean Discrepancy Kernels for Whole Slide Images
 
 ### Piotr Keller*, Muhammad Dawood and Fayyaz ul Amir Afsar Minhas
 ### Tissue Image Analytics Center, University of Warwick, United Kingdom
