@@ -5,7 +5,7 @@
 
 This repository contains the code for the following manuscript:
 
-Anubis: Slide-Level Maximum Mean Discrepancy  Kernels in Computational Pathology, submitted to Nature Machine Intelligence for review.
+Anubis: Maximum Mean Discrepancy Kernels for Whole Slide Images, submitted to Nature Machine Intelligence for review.
 
 ## Introduction
 
