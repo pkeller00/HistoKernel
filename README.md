@@ -22,7 +22,7 @@ Download drug sensitivity scores for breast cancer patients (https://github.com/
 For each WSI perform:
 
 - Tile extraction: extract 1024x1024 tiles from the large WSI at a spatial resolution of 0.50 microns-per-pixel
-- Patches capturing less that 40% of informative tissue are discarded
+- Patches capturing less that 40% of informative tissue are discarded (mean pixel intensity above 200)
 - Feature extraction: extract a feature vector for each tile using [`RetCCL`](https://github.com/Xiyue-Wang/RetCCL)
 
 Details can be found in the paper.
