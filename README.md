@@ -16,6 +16,8 @@ Anubis: Maximum Mean Discrepancy Kernels for Whole Slide Images, submitted to Na
 Download the FFPE whole slide images from GDC portal (https://portal.gdc.cancer.gov/).
 
 Download corresponding gene point mutation and Disease Specific Survival from cBioPortal (https://www.cbioportal.org/).
+
+Download drug sensitivity scores for breast cancer patients (https://github.com/engrodawood/HiDS).
 ### Step 2. Data processing
 For each WSI perform:
 
