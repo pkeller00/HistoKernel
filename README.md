@@ -17,7 +17,7 @@ Download the FFPE whole slide images from GDC portal (https://portal.gdc.cancer.
 
 Download corresponding gene point mutation and Disease Specific Survival from cBioPortal (https://www.cbioportal.org/).
 ### Step 2. Data processing
-Using the code under `code_data_processing` to perform
+For each WSI perform:
 
 - Tile extraction: extract 1024x1024 tiles from the large WSI at a spatial resolution of 0.50 microns-per-pixel
 - Patches capturing less that 40% of informative tissue are discarded
