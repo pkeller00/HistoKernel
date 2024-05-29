@@ -32,9 +32,12 @@ Using the code under [`MMD_distance_matrix_generator`](https://github.com/pkelle
 
 Details can be found in the paper and [MMD_distance_matrix_generator](https://github.com/pkeller00/Anubis/tree/main/MMD_distance_matrix_generator).
 
+### Step 4. Downstream Analysis
+To perfrom the downstream tasks (point mutation prediction, [`Drug Sensitivty prediction`](https://github.com/pkeller00/Anubis/tree/main/DrugSensitivity), [`Survival Analysis`](https://github.com/pkeller00/Anubis/tree/main/SurvivalAnalysis) and [`WSI Retrival`](https://github.com/pkeller00/Anubis/tree/main/WSIRetrival) ) mentioned in the paper  navigate to the appropraite folder in this GitHub.
+
 ## Note
 
-Some intermediate data are put into the folder `data`.
+Some intermediate data are put into the folder [`data`](https://github.com/pkeller00/Anubis/tree/main/data).
 
 --------
 
