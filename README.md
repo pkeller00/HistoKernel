@@ -1,11 +1,11 @@
-# Anubis: Maximum Mean Discrepancy Kernels for Whole Slide Images
+# HistoKernel: Maximum Mean Discrepancy Kernels for Whole Slide Images
 
 ### Piotr Keller*, Muhammad Dawood and Fayyaz ul Amir Afsar Minhas
 ### Tissue Image Analytics Center, University of Warwick, United Kingdom
 
 This repository contains the code for the following manuscript:
 
-Anubis: Maximum Mean Discrepancy Kernels for Whole Slide Images, submitted to Nature Machine Intelligence for review.
+HistoKernel: Maximum Mean Discrepancy Kernels for Whole Slide Images, submitted to Nature Machine Intelligence for review.
 
 ## Introduction
 In Computational Pathology (CPath) the use of multi-gigapixel images for various clinical tasks is common. However, due to the size of these images current methods are forced to make patch-level predictions which are then aggregated into slide-level predictions. This work proposes a novel solution to the aggregation problem. By utilizing Maximum Mean Discrepancy (MMD) to measure similarity between Whole Slide Images (WSIs) we generate a slide-level similarity kernel that common kernel based methods can leverage. We perform a comprehensive analysis of this novel approach in CPath. We use this method, with WSIs as input, to perform point mutation classification (n = 3419), drug sensitivity prediction (n = 551), survival analysis (n = 2291) and WSI retrieval (n = 9362) beating existing baselines. We also propose a novel perturbation based method to provide patch-level explainability of our model. This work opens up avenues for further exploration of kernel methods to perform slide-level tasks in CPath.
