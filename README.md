@@ -13,6 +13,27 @@ Computational Pathology (CPath) uses multi-gigapixel Whole Slide Images (WSIs) f
 <img src="workflow.png" alt="Block Diagram"/>
 
 ## Dependencies
+scipy
+
+numpy
+
+matplotlib
+
+geomloss
+
+pandas
+
+torch
+
+sksurv
+
+lifelines
+
+sklearn
+
+seaborn
+
+tqdm
 
 ## Usage
 ### Step 1. Data download
