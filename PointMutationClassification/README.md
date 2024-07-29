@@ -7,4 +7,4 @@ For this task, we are interested in using WSIs to predict if a point mutation in
 To perform this the distance matrix and its corresponding slide IDs [(from Google Drive)](https://drive.google.com/drive/folders/1gT7UDz9vjz9eHOgil-8ICfLvBKWw3GUr) are required. You can also use your own distance matrix by using `MMD_distance_matrix_generator`.
 
 To perform Point Mutation Classifiction for comparison paper and our MMD-based approach:
-1) 
+1) test
