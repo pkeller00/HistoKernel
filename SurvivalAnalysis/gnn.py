@@ -74,9 +74,8 @@ USE_CUDA = torch.cuda.is_available()
 rng = np.random.default_rng()
 device = {True:'cuda:0',False:'cpu'}[USE_CUDA]
 
-OUTPUT_PATH = "/home/u1904706/cloud_workspace/githubs/Anubis/SurvivalAnalysis/results/gnn_results.csv"
-MODEL_PATH = '/home/u1904706/cloud_workspace/dawood_survival/Best_model/'
-SURVIVAL_PATH = r'/home/u1904706/cloud_workspace/dawood_survival/NIHMS978596-supplement-1.xlsx'
+OUTPUT_PATH = "./results/gnn_results.csv"
+SURVIVAL_PATH = r'../data/SurvivalAnalysis/NIHMS978596-supplement-1.xlsx'
 
 def cuda(v):
     if USE_CUDA:
@@ -481,9 +480,9 @@ if __name__ == '__main__':
             TS = TS[cols2read][TS.type == CANCER]
         
         if SHUFFLE_NET:
-            bdir = r'/home/u1904706/cloud_workspace/dawood_survival/graphs/'+CANCER+'/'
+            bdir = r'./graphs/'+CANCER+'/'
             # Set up directory for on disk dataset
-            directory = r'/home/u1904706/cloud_workspace/dawood_survival/graph_surv/'+CANCER+'/'
+            directory = r'./graph_surv/'+CANCER+'/'
             try:
                 os.mkdir(directory)
             except FileExistsError:
@@ -495,10 +494,6 @@ if __name__ == '__main__':
         device = 'cuda:0'
         cpu = torch.device('cpu')
 
-        try:
-            os.mkdir(MODEL_PATH)
-        except FileExistsError:
-            pass
         graphlist = natsorted(graphlist)
         dataset = []
         from tqdm import tqdm

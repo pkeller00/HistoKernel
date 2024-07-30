@@ -61,11 +61,10 @@ def build_graph(d,locs_centroids,label=1):
           pickle.dump(G, f)
 
 
-DATA_DIR = f'/home/u1904706/cloud_workspace'
-FEATURES_DIR = f'/home/u1904706/cloud_workspace/RetSSL-FEATS'
-GRAPHS_DIR_BASE = f'/home/u1904706/cloud_workspaceawood_survival/graphs'
-SURVIVAL_DATA_PATH = '/home/u1904706/cloud_workspace/dawood_survival/NIHMS978596-supplement-1.xlsx'
-UPDATED_BRAIN_CLASSES_PATH = '/home/u1904706/cloud_workspace/dawood_survival/ijms-2057006_Table S2.xlsx'
+FEATURES_DIR = f'../data/Features/RetSSL-FEATS'
+GRAPHS_DIR_BASE = f'./graphs'
+SURVIVAL_DATA_PATH = '../data/SurvivalAnalysis/NIHMS978596-supplement-1.xlsx'
+UPDATED_BRAIN_CLASSES_PATH = '../data/SurvivalAnalysis/ijms-2057006_Table S2.xlsx'
 #Filter wsis by type
 import pandas as pd
 

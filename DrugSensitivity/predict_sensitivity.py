@@ -10,11 +10,11 @@ from sklearn.model_selection import KFold
 import pickle
 
 FOLDS = 5
-SLIDE_IDS_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/MMDMatrix/IDS.npy'
-D_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/MMDMatrix/D_full.npy'
-DRUG_SENSITIVITY_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/DrugSensitivity/BRCA_Drug_sensitivity.csv'
-GOOD_SLIDES_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/data/DrugSensitivity/slide_selection_final.txt'
-OUTPUT_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/DrugSensitivity/results/results.pickle'
+SLIDE_IDS_PATH = '../data/MMDKernel/IDS.npy'
+D_PATH = '../data/MMDKernel/D_full.npy'
+DRUG_SENSITIVITY_PATH = '../data/DrugSensitivity/BRCA_Drug_sensitivity.csv'
+GOOD_SLIDES_PATH = '../data/DrugSensitivity/slide_selection_final.txt'
+OUTPUT_PATH = './results/results.pickle'
 
 slides_mmd = np.load(SLIDE_IDS_PATH)
 slides_mmd = [os.path.basename(i).split('.')[0] for i in slides_mmd]

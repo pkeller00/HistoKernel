@@ -65,10 +65,10 @@ rng = np.random.default_rng()
 device = {True:'cuda:0',False:'cpu'}[USE_CUDA]
 FOLDS = 5
 
-SLIDES_PATH = r'/home/u1904706/cloud_workspace/dawood_survival/IDS.npy'
-D_PATH = r'/home/u1904706/cloud_workspace/dawood_survival/D_full.npy'
-OUTPUT_PATH = r"/home/u1904706/cloud_workspace/githubs/Anubis/SurvivalAnalysis/results/mmd_results.csv"
-SURVIVAL_PATH = r'/home/u1904706/cloud_workspace/dawood_survival/NIHMS978596-supplement-1.xlsx'
+SLIDES_PATH = r'../data/MMDKernel/IDS.npy'
+D_PATH = r'../data/MMDKernel/D_full.npy'
+OUTPUT_PATH = r"../data/SurvivalAnalysis/results/mmd_results.csv"
+SURVIVAL_PATH = r'../data/SurvivalAnalysis/NIHMS978596-supplement-1.xlsx'
 
 def cuda(v):
     if USE_CUDA:
@@ -156,10 +156,10 @@ if __name__ == '__main__':
             TS = TS[cols2read][TS.type == CANCER]
 
         if SHUFFLE_NET:
-            bdir = r'/home/u1904706/cloud_workspace/dawood_survival/graphs/'+CANCER+'/'
+            bdir = r'./graphs/'+CANCER+'/'
             
             # Set up directory for on disk dataset
-            directory = r'/home/u1904706/cloud_workspace/dawood_survival/graph_surv/'+CANCER+'/'
+            directory = r'./graph_surv/'+CANCER+'/'
             
             try:
                 os.mkdir(directory)
@@ -326,7 +326,7 @@ if __name__ == '__main__':
                     
                 plt.ylim(0.5, 1)
                 ax.get_legend().remove()
-                curves_dir = f'/home/u1904706/cloud_workspace/dawood_survival/kmcurves/{CANCER}'
+                curves_dir = f'./kmcurves/{CANCER}'
                 if not os.path.exists(curves_dir):
                     os.mkdir(curves_dir)
                 plt.savefig(f'{curves_dir}/{run_counter}.svg',dpi=600,bbox_inches='tight')

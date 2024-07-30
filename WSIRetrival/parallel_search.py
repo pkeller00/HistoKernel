@@ -208,11 +208,10 @@ def wsi_query(mosaics, test_mosaics, metadata, site, weight, cosine_threshold, r
 if __name__ == "__main__":
     cosine_threshold = 0.7
 
-    BASE_PATH = '/home/u1904706/cloud_workspace/testingRetrival'
-    metadata_path = f'{BASE_PATH}/metadata.csv'
-    mosaics_path = f'{BASE_PATH}/results'
-    RESULTS_DIR = f'{BASE_PATH}/results_search'
-    RESULTS_TIME_DIR = f'{BASE_PATH}/results_time'
+    metadata_path = f'../data/WSIRetrival/metadata.csv'
+    mosaics_path = f'./mosaics'
+    RESULTS_DIR = f'./retcll_search'
+    RESULTS_TIME_DIR = f'./search_times'
 
 
     metadata = pd.read_csv(metadata_path)

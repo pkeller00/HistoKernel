@@ -9,11 +9,12 @@ from statistics import mode, mean
 from tqdm import tqdm
 import numpy as np
 
-BASE_PATH = '/home/u1904706/cloud_workspace/testingRetrival'
-OUTPUT_DIR = '/home/u1904706/cloud_workspace/githubs/Anubis/WSIRetrival/results'
-D_MMD_PATH = '/home/u1904706/cloud_workspace/dawood_survival/D_full.npy'
-IDS_MMD_PATH = '/home/u1904706/cloud_workspace/dawood_survival/IDS.npy'
-META_DATA_PATH = '/home/u1904706/cloud_workspace/githubs/Anubis/WSIRetrival/metadata.csv'
+OUTPUT_DIR = './WSIRetrival/results'
+D_MMD_PATH = '../data/MMDKernel/D_full.npy'
+IDS_MMD_PATH = '../data/MMDKernel/IDS.npy'
+META_DATA_PATH = '../data/WSIRetrival/metadata.csv'
+RETCCL_SEARCH_RESULTS = './retcll_search'
+
 SITE_DICT = {"Pulmonary":["LUAD","LUSC","MESO"],
              "Urinary": ["BLCA","KIRC","KICH","KIRP"],
              "Gastrointestinal" : ["COAD","ESCA","READ","STAD"],
@@ -108,12 +109,11 @@ def subtype_result_MMD(retrival,metadata,IDs,K):
     return total,len(list(patients)),correct/total
 
 # Go through each site
-
 retccl_results = []
 mmd_results = []
 for site in tqdm(SITE_DICT.keys()):
     site_df = []
-    SITE_PATH = os.path.join(BASE_PATH,'results_search',site,'temp')
+    SITE_PATH = os.path.join(RETCCL_SEARCH_RESULTS,site,'temp')
     retrival = glob(os.path.join(SITE_PATH,'*WSIRet.pkl'))
 
     D = np.load(D_MMD_PATH)

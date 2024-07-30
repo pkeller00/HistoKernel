@@ -4,8 +4,10 @@ from tqdm import tqdm
 import numpy as np
 from os.path import join, abspath
 import pandas as pd
+
 WSIS_PATH_FILTERED = '/home/u1904706/Desktop/MMDKernels/Features/TCGA/RetSSL-FEATS-FILTERED/'
-RESULTS = '/home/u1904706/Desktop/MMDKernels/wsiRetrivalExternal/results'
+RESULTS = './WSIRetrival/mosaics'
+
 images = glob(os.path.join(WSIS_PATH_FILTERED,'*_feat.npy'))
 mosaics = []
 
@@ -33,7 +35,7 @@ mosaics = {"Pulmonary":[],
              "Prostate":[]
              }
 
-metadata = pd.read_csv('/home/u1904706/Desktop/MMDKernels/wsiRetrivalExternal/metadata.csv')
+metadata = pd.read_csv('../data/WSIRetrival/metadata.csv')
 metadata = metadata.set_index('file_name')
 
 total = 0

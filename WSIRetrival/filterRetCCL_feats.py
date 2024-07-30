@@ -8,9 +8,8 @@ from tqdm import tqdm
 K_1 = 9
 R = 0.2
 
-WSIS_PATH = '/home/u1904706/cloud_workspace/Features/TCGA/RetSSL-FEATS/'
-WSIS_POS_PATH = '/home/u1904706/cloud_workspace/Features/TCGA/RetSSL-POS/'
-WSIS_PATH_FILTERED = '/home/u1904706/cloud_workspace/Features/TCGA/RetSSL-FEATS-FILTERED/'
+WSIS_PATH = '../data/Features/RetSSL-FEATS/'
+WSIS_PATH_FILTERED = '../data/Features/RetSSL-FEATS-FILTERED/'
 
 images = glob(os.path.join(WSIS_PATH,'*_feat.npy'))
 
@@ -29,7 +28,7 @@ for image_path in tqdm(images):
         patch_idx = np.where(cluster_labels==cluster_idx)[0]
         K_2 = max(1,round(len(patch_idx)*0.2))
 
-        image_pos_path = os.path.join(WSIS_POS_PATH,os.path.basename(image_path)[:-9]+'_pos.npy')
+        image_pos_path = os.path.join(WSIS_PATH,os.path.basename(image_path)[:-9]+'_pos.npy')
         wsi_pos = np.load(image_pos_path)
 
         wsi_pos_filtered = wsi_pos[patch_idx,:]
