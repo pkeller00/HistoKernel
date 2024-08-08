@@ -1,6 +1,6 @@
 # HistoKernel: Whole Slide Image Level Maximum Mean Discrepancy Kernels for Pan-Cancer Predictive Modelling
 
-### Piotr Keller*, Muhammad Dawood and Fayyaz ul Amir Afsar Minhas
+### Piotr Keller*, Muhammad Dawood, Brinder Chohan and Fayyaz ul Amir Afsar Minhas
 ### Tissue Image Analytics Center, University of Warwick, United Kingdom
 
 This repository contains the code for the following manuscript:
