@@ -5,7 +5,7 @@
 
 This repository contains the code for the following manuscript:
 
-HistoKernel: Whole Slide Image Level Maximum Mean Discrepancy Kernels for Pan-Cancer Predictive Modellings, submitted to Nature Machine Intelligence for review.
+HistoKernel: Whole Slide Image Level Maximum Mean Discrepancy Kernels for Pan-Cancer Predictive Modellings, submitted to Medical Image Analysis for review.
 
 ## Introduction
 Computational Pathology (CPath) uses multi-gigapixel Whole Slide Images (WSIs) for various clinical tasks. However, due to the size of these images current methods are forced to make patch-level predictions which are then aggregated into WSI-level predictions. This work proposes a novel solution to the aggregation problem. By utilizing Maximum Mean Discrepancy (MMD) to measure similarity between WSIs we generate a WSI-level similarity kernel that kernel-based approaches can leverage. We perform a comprehensive analysis of this novel approach by performing WSI retrieval (n = 9,362), drug sensitivity regression (n = 551), point mutation classification (n = 3,419), survival analysis (n = 2,291) and multi-modal learning (n=956), outperforming existing methods. We also propose a novel perturbation based method to provide patch-level explainability of our model. This work opens up avenues for further exploration of WSI-level predictive modelling with kernel-based methods.
